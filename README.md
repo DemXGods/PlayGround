@@ -16,3 +16,12 @@
 - 👤 [Explore the creator's projects](https://go.ondev.store/DemXGods).
 - 🌍 [Create with OMGithub](https://go.ondev.store/).
 <!-- omgithub:readme:end -->
+
+## The Vale of Emberlight
+
+A complete, original top-down woodland adventure. Explore the Hushing Wood, gather three lost embers, fend off wandering moss sprites, and wake the old shrine.
+
+### Play
+
+Open `index.html` in a browser (or serve this folder over HTTP). Use **WASD** or the **arrow keys** to move, **Space** (or **J**) to swing your sword, and **E** to listen at the glade or shrine. Touch controls are included for phones and tablets. Find all three embers, then return to the shrine and press **E** to finish the journey.
+

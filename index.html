@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101c22" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23e4bb69%22>✦</text></svg>" />
+  <title>The Vale of Emberlight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Emberlight home"><span class="brand-mark">✦</span><span>EMBERLIGHT <i>FIELD JOURNAL</i></span></a>
+      <div class="chapter">CHAPTER I <span>·</span> THE HUSHING WOOD</div>
+      <button class="sound-button" id="soundToggle" aria-label="Toggle sound" title="Toggle sound"><span id="soundIcon">♫</span></button>
+    </header>
+    <section class="game-frame" aria-label="The Vale of Emberlight game">
+      <canvas id="game" width="960" height="600" aria-label="Game world"></canvas>
+      <div class="vignette"></div>
+      <div class="hud">
+        <div class="quest-card">
+          <div class="quest-eyebrow"><span class="quest-dot"></span> YOUR QUEST</div>
+          <div class="quest-title" id="questTitle">Wake the old shrine</div>
+          <div class="quest-progress"><span id="questProgress">Find the three lost embers</span><b id="shardCount">0 / 3</b></div>
+          <div class="progress-track"><i id="progressFill"></i></div>
+        </div>
+        <div class="health-card"><span class="health-label">VITALITY</span><div id="hearts" class="hearts" aria-label="3 hearts">♥ ♥ ♥</div></div>
+        <div class="location-pill"><span class="location-icon">⌖</span> HUSHING WOOD <span class="location-sep">/</span> <span id="zoneName">SUNLIT GLADE</span></div>
+        <div id="toast" class="toast" aria-live="polite"></div>
+      </div>
+      <div class="start-screen" id="startScreen">
+        <div class="start-panel">
+          <div class="sun-mark"><span>✦</span></div>
+          <div class="overline">A SMALL ADVENTURE</div>
+          <h1>The Vale of<br><em>Emberlight</em></h1>
+          <p>Beyond the quiet woods, an ancient shrine has gone dark. Find the lost embers, and bring the valley back to life.</p>
+          <button class="primary-button" id="startButton">Begin your journey <span>↗</span></button>
+          <div class="key-hint">MOVE <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>·</span> SWORD <kbd>SPACE</kbd></div>
+        </div>
+      </div>
+      <div id="winScreen" class="end-screen hidden"><div class="end-card"><div class="end-symbol">✦</div><div class="overline">THE VALE REMEMBERS</div><h2>Light returns<br><em>to the wood.</em></h2><p>The old shrine sings again. The embers you carried will glow here for a long, long time.</p><button class="primary-button" id="playAgain">Wander once more <span>↗</span></button></div></div>
+      <div class="controls-hint"><span>WASD</span> MOVE <i>·</i> <span>SPACE</span> SWING <i>·</i> <span>E</span> LISTEN</div>
+      <div class="mobile-controls" aria-label="Touch controls">
+        <div class="dpad">
+          <button data-dir="up" aria-label="Move up">▲</button>
+          <button data-dir="left" aria-label="Move left">◀</button>
+          <button data-dir="down" aria-label="Move down">▼</button>
+          <button data-dir="right" aria-label="Move right">▶</button>
+        </div>
+        <button id="touchAttack" class="attack-button" aria-label="Swing sword">✦<small>SWING</small></button>
+        <button id="touchInteract" class="listen-button" aria-label="Listen">E</button>
+      </div>
+    </section>
+    <footer class="footer"><span>✧ &nbsp; A quiet world, waiting to be found.</span><span>ARROW KEYS ALSO WORK</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
